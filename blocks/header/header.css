@@ -266,3 +266,22 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/*Gopi custom changes*/
+.header .nav-brand  {
+  position: relative;
+}
+
+.header .nav-brand::before {
+  content: '';
+  position: absolute;
+  right:0;
+  top: 45%;       /* Start at 25% from the top */
+  height: 30%;    /* Covers 50% (i.e., 100% - 25% top - 25% bottom) */
+  width: 2px;     /* Thickness of the line */
+  background-color: #ccc; /* Your desired color */
+}
+span.icon.icon-ibmlogo {
+  margin-top:25px;
+}
+
