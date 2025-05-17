@@ -285,3 +285,11 @@ span.icon.icon-ibmlogo {
   margin-top:25px;
 }
 
+.nav-tools .icon {
+  margin-right: 32px; /* or whatever spacing you want */
+}
+
+/* Optional: Remove margin from last icon */
+.nav-tools .icon:last-child {
+  margin-right: 0;
+}
