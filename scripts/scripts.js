@@ -110,6 +110,44 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
+//This picks the immediate child from doc present under the hero--- Breadcrumb, description, buttons- primary and secondary
+document.addEventListener("DOMContentLoaded", () => {
+  // Move breadcrumb inside hero before the heading
+  const breadcrumbContainer = document.querySelector('.breadcrumb-container');
+  const heroContentDiv = document.querySelector('.hero.block > div > div');
+
+  if (breadcrumbContainer && heroContentDiv) {
+    heroContentDiv.insertBefore(breadcrumbContainer, heroContentDiv.firstChild);
+  }
+
+  // Move leadspacedescription below all hero content
+  const leadspaceDesc = document.querySelector('.leadspacedescription-wrapper');
+  const heroContentWrapper = document.querySelector('.hero.block > div');
+
+  if (leadspaceDesc && heroContentWrapper) {
+    heroContentWrapper.appendChild(leadspaceDesc);
+  }
+
+  // Move only buttons from the section immediately after the hero
+  const heroSection = document.querySelector('.hero-container');
+  const nextSection = heroSection?.nextElementSibling;
+
+  if (nextSection) {
+    const buttonContainers = nextSection.querySelectorAll('.button-container');
+
+    if (buttonContainers.length) {
+      const buttonWrapper = document.createElement('div');
+      buttonWrapper.className = 'hero-button-wrapper';
+
+      buttonContainers.forEach((btn) => {
+        buttonWrapper.appendChild(btn); // move, not clone
+      });
+
+      heroContentWrapper.appendChild(buttonWrapper);
+    }
+  }
+});
+
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
