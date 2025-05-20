@@ -110,8 +110,9 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
-//This picks the immediate child from doc present under the hero--- Breadcrumb, description, buttons- primary and secondary
-document.addEventListener("DOMContentLoaded", () => {
+// This picks the immediate child from doc present under the hero.
+// It includes: Breadcrumb, description, and buttons - primary and secondary.
+document.addEventListener('DOMContentLoaded', () => {
   // Move breadcrumb inside hero before the heading
   const breadcrumbContainer = document.querySelector('.breadcrumb-container');
   const heroContentDiv = document.querySelector('.hero.block > div > div');

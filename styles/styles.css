@@ -20,8 +20,7 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-
+  --body-font-family: 'IBM Plex Sans', 'Helvetica Neue', arial, sans-serif;
   --heading-font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif;
 
   /* body sizes */
@@ -260,6 +259,7 @@ main .section.highlight {
 .nav-brand{
 margin-bottom:20px;
 }
+
 /* breadcrumb */
 .breadcrumb {
   font-size: 0.9em;
@@ -282,6 +282,7 @@ font-size: 18px;
 }
 
 .hero-button-wrapper {
+  bottom: 70px;
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
@@ -291,6 +292,7 @@ font-size: 18px;
 .hero-button-wrapper .button-container {
   margin: 0;
 }
+
 .hero-button-wrapper .button-container a::after{
     content: '';
     display: inline-block;
@@ -301,8 +303,10 @@ font-size: 18px;
     background-size: contain;
     vertical-align: middle;
 }
+
 .leadspacedescription-wrapper{
   max-width: 300px;
+  bottom: 150px;
   width: 100%;
   word-wrap: break-word;
   white-space: normal;
@@ -314,16 +318,6 @@ font-size: 18px;
   position: absolute;
   left: 20px;
   right: 20px;
-}
-
-.leadspacedescription-wrapper {
-  bottom: 150px;
-}
-
-.hero-button-wrapper {
-  bottom: 70px;
-  display: flex;
-  gap: 1rem;
 }
 
 .button-container a.button.primary{
@@ -341,7 +335,7 @@ font-size: 18px;
 }
 
 .contentblock-wrapper{
-  grid-column: 4 / 10;
+  grid-column: 4 / 11;
 }
 
 .contentblock-wrapper .contentblock h1{
@@ -365,7 +359,8 @@ font-size: 18px;
 .columns1-wrapper, .columns2-wrapper, .columns3-wrapper, .columns4-wrapper, .columns5-wrapper, .columns6-wrapper {
   grid-column: 4/12;
 }
-/*col1,2,3,4,5,6*/
+
+/* col1,2,3,4,5,6 */
 
 .columns1.block > div, .columns2.block > div, .columns3.block > div, .columns4.block > div, .columns5.block > div, .columns6.block > div  {
   display: flex;
@@ -397,6 +392,7 @@ font-size: 18px;
 .columns1 h6, .columns2 h6, .columns3 h6, .columns4 h6, .columns5 h6, .columns6 h6 {
  font-weight:400;
 }
+
 .columns1 h1, .columns2 h1, .columns3 h1, .columns4 h1, .columns5 h1, .columns6 h1 {
  font-weight:200;
  margin-bottom:4rem;
@@ -410,4 +406,68 @@ font-size: 18px;
  justify-content: flex-start;
 }
 
+/* cards */
+.cards-container{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 
+.cards-wrapper{
+grid-column:4/12;
+}
+
+.cards.block > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 32px; /* adjust spacing between cards */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.cards.block li {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Make the body stretch and align link to bottom */
+.cards-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Push only the last link paragraph down */
+.cards-card-body p:last-of-type {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cards-card-body p {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* adjust spacing between link and icon */
+  justify-content: left; /* center horizontally, optional */
+  margin: 0; /* remove default margin if needed */
+}
+
+.cards-card-body .icon-bluearrow img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+/* card */
+.cards-card-body p:first-of-type {
+  display: block;
+  margin-bottom:1rem;
+}
+
+.cards-card-body p:first-of-type strong {
+  display: block;
+}

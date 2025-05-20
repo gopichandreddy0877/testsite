@@ -20,7 +20,7 @@ header nav {
   padding: 0 24px;
   font-family: var(--body-font-family);
   border-bottom:1px solid #989898;
-  color:rgb(22,22,22);
+  color:#161616;
 }
 
 header nav[aria-expanded='true'] {
@@ -276,7 +276,7 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 32px 32px;
+    padding: 32px;
   }
 }
 
@@ -285,7 +285,7 @@ header nav .nav-tools {
   grid-area: tools;
 }
 
-/*Gopi custom changes*/
+
 .header .nav-brand  {
   position: relative;
 }
@@ -299,6 +299,7 @@ header nav .nav-tools {
   width: 1.25px;     /* Thickness of the line */
   background-color: #ddd; /* Your desired color */
 }
+
 span.icon.icon-ibmlogo {
   margin-top:25px;
 }
