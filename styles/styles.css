@@ -277,7 +277,7 @@ font-size: 18px;
 }
 
 .leadspacedescription{
-  margin-left:11px;
+  margin-left:32px;
   font-size:20px;
 }
 
@@ -286,6 +286,7 @@ font-size: 18px;
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  margin-left: 2rem;
   flex-wrap: wrap;
 }
 
