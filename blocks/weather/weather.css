@@ -1,1 +1,19 @@
 /* Empty for now, to be filled when component is implemented */
+
+.weather-container{
+    display:grid;
+    grid-template-columns: repeat(12,1fr)
+}
+
+.weather-wrapper{
+    grid-column:2/12;
+}
+
+.weather.block p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-left: 5px solid #2196f3;
+    margin-top: 10px;
+}

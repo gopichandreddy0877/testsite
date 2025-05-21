@@ -472,3 +472,16 @@ grid-column:4/12;
 .cards-card-body p:first-of-type strong {
   display: block;
 }
+
+.contentblockctacards-container{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+}
+
+.contentblockctacards-wrapper{
+    grid-column: 4/12;
+}
+
+.contentblockctacards.block div:last-of-type {
+
+}
